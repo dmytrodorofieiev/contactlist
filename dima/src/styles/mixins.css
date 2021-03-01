@@ -1,0 +1,31 @@
+
+@mixin for-size($size) {
+    @if ($size==all) {
+        @media (max-width: 0px) {
+            @content
+        }
+    };
+    @if ($size==mobile) {
+        @media (max-width: 767px) {
+            @content
+        }
+    };
+    @if ($size==tablet) {
+        @media (max-width: 1054px) {
+            @content
+        }
+    };
+
+
+
+    @if ($size==desktop) {
+        @media (min-width: 768px) {
+            @content
+        }
+    };
+    @if ($size==xldesktop) {
+        @media (min-width: 2000px) {
+            @content
+        }
+    };
+}
